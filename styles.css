@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&family=Lato:ital,wght@0,700;1,700&family=Montserrat&family=Roboto+Condensed&family=Signika:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    border-bottom: 1px solid;
+}
+.nav-item{
+    border: 2px solid #00A505;
+    border-radius: 8px;
+    padding: 0rem 1rem !important;
+    margin: 0rem 1rem;
+}
+.nav-item:hover{
+    background-color: #00A505 !important;
+}
+.nav-link .fa-solid, .fas {
+    font-weight: 900;
+    padding: 0px 5px;
+    color: #ff136e;
+}
+.dropdown-item:hover{
+    background-color: #00A505;
+}
+.btn{
+    border: 2px solid #00A505 !important;
+    background-color: black !important;
+    color: white !important;
+}
+.btn:hover{
+    background-color: #00A505 !important;
+}
+#selected{
+    display: none;
+}
+.slider-img{
+    max-width: 100%;
+    height: 500px;
+}
+.items-box{
+    background-color: black;
+    margin-bottom: 1rem;
+}
+.items-text img{
+    transition: transform .2s;
+}
+.items-text img:hover{
+    /* transform: perspective(10px); */
+    transform:scale(2.5);
+}
+.items-text{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.items-text h3{
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+.items-text p{
+    line-height: normal;
+    font-size: 0.9rem;
+    color: white;
+}
+.items-text h5{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00A505;
+}
+.items-text button{
+    width: 100%;
+    background-color: black;
+    border: 1px solid #00A505;
+}
+.items-text button:hover{
+    background-color: #00A505;
+}
+.modal-dialog{
+    max-width: 1000px !important;
+}
+.Cart-Items{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.Cart-Items h1{
+    font-weight: bold;
+    margin: 0;
+    font-size: 2.5rem;
+}
+.Cart-Items p{
+    font-size: 1.4rem;
+    line-height: normal;
+}
+.Cart-Items h5{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.select {
+    border-top: 1px solid black;
+    padding: 1rem 0.5rem;
+}
+.span {
+    font-size: 1.15rem;
+}
+.modal-dialog-scrollable .modal-content {
+    max-height: 100%;
+    overflow: auto !important;
+}
+.itemsBox:nth-of-type(){
+    background-color: black;
+    color: white;
+}
+.itemsBox:hover {
+    background-color: black;
+    color: white;
+}
+.imgBox{
+    margin: 0 auto;
+}
+.imgBox img{
+    height: 80px;
+}
+.itemsBox h4{
+    font-family: cursive;
+    margin: 0;
+}
+.sliders{
+    position: relative;
+}
+.shadow{
+    position: sticky;
+    top: 0;
+    box-shadow: 0 .9rem 1rem rgba(0,0,0,.15)!important;
+}
+.itemName h1{
+    margin: 0;
+    font-family: 'Roboto Condensed';
+    font-size: 50px;
+}
+.addCart button{
+    background-color: black;
+    border: 1px solid #00A505;
+}
+.addCart button:hover{
+    background-color: #00A505;
+}
+#offcanvasWithBothOptionsLabel{
+    font-family: sans-serif;
+}
+.delievery p {
+    background-color: #fff4df;
+    padding: 1rem;
+    font-size: 12px;
+    color: #8A5A00;
+    font-family: Poppins,sans-serif!important;
+}
+.cheackout a{
+    padding: 0.5rem 1rem !important;
+}
+.orderWait p{
+    font-size: 16px;
+    padding: 1rem 1rem;
+    background-color: aliceblue;
+    border-radius: 8px;
+    font-family: Poppins,sans-serif!important;
+    line-height: 1.5;
+}
+.itm{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.aboutSAS h1{
+    margin-bottom: 1rem;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.iconsRow i{
+    font-size: 30px;
+    padding-right: 10px;
+}

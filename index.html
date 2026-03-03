@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./bootstrapCSS.min.css">
+    <!-- <link rel="stylesheet" href="./bootstrap.css.map">
+    <link rel="stylesheet" href="./bootstrap.min.css.map">
+    <title>SAS Fast Food</title> -->
+</head>
+
+<body>
+    <div class="Wrapper">
+        <div class="header">
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg px-5 bg-black text-white">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="./images/logo.png" class="img-fluid"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="#"><i
+                                            class="fa-solid fa-motorcycle"></i><span>Delivery</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="#"><i
+                                            class="fa-sharp fa-solid fa-box"></i><span>PickUp</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-location-dot"></i> <span>City Location</span>
+                                    </a>
+                                    <ul class="dropdown-menu bg-black">
+                                        <li><a class="dropdown-item text-white" href="#">Karachi</a></li>
+                                        <li><a class="dropdown-item text-white" href="#">Hyderabad </a></li>
+                                        <li><a class="dropdown-item text-white" href="#">Sukkur</a></li>
+                                        <li><a class="dropdown-item text-white" href="#">Nawabshah </a></li>
+                                        <li><a class="dropdown-item text-white" href="#">MirpurKhass</a></li>
+                                        <li><a class="dropdown-item text-white" href="#">Larkana </a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item " id="selected">
+                                    <a class="nav-link active text-white" aria-current="page" href="#"><i
+                                            class="fa-solid fa-location-dot" id="curLocLogo"></i><span
+                                            id="currentLocation"></span></a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" id="myInput" type="search" onclick="myFunction() "
+                                    placeholder="Search" aria-label="Search">
+                                <button class="btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="sliders ">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/PIZZA.jpg" class="d-block w-100 slider-img img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/SAS-Burger.jpg" class="d-block  slider-img w-100 img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/delievry.jpg" class="d-block  slider-img w-100 img-fluid" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid shadow sticky z-3 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="itemsBox text-center p-3">
+                            <div class="imgBox w-75 text-center">
+                                <img src="./images/mexican.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4 class="fs-6">Pizza</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="itemsBox text-center p-3">
+                            <div class="imgBox w-75 text-center">
+                                <img src="./images/burger.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4 class="fs-6">Burgers</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="itemsBox text-center p-3">
+                            <div class="imgBox w-75 text-center">
+                                <img src="./images/clubsandwich.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4 class="fs-6">Club Sandwich</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="itemsBox text-center p-3">
+                            <div class="imgBox w-75 text-center">
+                                <img src="./images/mexican.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4 class="fs-6">Pasta</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="itemsBox text-center p-3">
+                            <div class="imgBox w-75 text-center">
+                                <img src="./images/fries.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4 class="fs-6">Fries</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="itemsBox text-center p-3">
+                            <div class="imgBox w-75 text-center">
+                                <img src="./images/drinks.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4 class="fs-6">Drinks</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pizzaItems my-5">
+            <div class="itemName">
+                <h1>Pizzas</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick=" mexican(0)">
+                        <div class="items-img">
+                            <img src="./images/mexican.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Mexican Treat</h3>
+                            <p>Made in Chiken Tikka, Mayo Souce, Onion and Chease.</p>
+                            <h5>From Rs.550</h5>
+                            <button class="btn btn-warning">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/mexican.jpg" class="img-fluid h-100 getImg"
+                                                alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <h1 class="objName">Mexican Treat</h1>
+                                                <p>Made in Chiken Tikka, Mayo Souce, Onion and Chease.</p>
+                                                <h5>From Rs.550</h5>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size" id="4160"
+                                                                            class="ab" value="Small Pizza"
+                                                                            class="radioInp" onclick="smAdd(0, 550)">
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        750</span>
+                                                                    <span id="box1_smPrize"
+                                                                        class="text-right p-0 float-right">
+                                                                        550</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size" id="4161"
+                                                                            value="Small Pizza" class="radioInp"
+                                                                            onclick="mdAdd(0, 700)">
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        850</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        700</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size" id="4162"
+                                                                            value="Small Pizza" class="radioInp"
+                                                                            onclick="lgAdd(0, 900)">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        1100</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        900</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(0, 550, 700, 900)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(0, 550, 700, 900)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100"
+                                                            onclick="modal(0, 'getImg')" type="button"
+                                                            data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#chicagoPop" onclick="mexican(1)">
+                        <div class="items-img">
+                            <img src="./images/ChicagoBull.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3 class="objName">Chicago Bull</h3>
+                            <p>Made in Garlic Mayo souce, Chiken Tikka, Onion, Mashrooms and Chease.</p>
+                            <h5>From Rs.650</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="chicagoPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/ChicagoBull.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1>Chicago Bull </h1>
+                                                        <p>Made in Garlic Mayo souce, Chiken Tikka, Onion, Mashrooms and
+                                                            Chease.</p>
+                                                        <h5>From Rs.650</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(1, 650)" id="4163"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        750</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        650</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="mdAdd(1, 800)" id="4164"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        900</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        800</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="lgAdd(1, 1000)" id="4165"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        1200</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        1000</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(1, 650, 800, 1000)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(1, 650, 800, 1000)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(1)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#ArianoPop" onclick="mexican(2)">
+                        <div class="items-img">
+                            <img src="./images/arizano.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Ariano Cream</h3>
+                            <p>Made in Creamy Souce, Chiken Tikka, Onion and Chease.</p>
+                            <h5>From Rs.600</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ArianoPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/arizano.jpg" class="img-fluid h-100 getImg"
+                                                alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Ariano Cream</h1>
+                                                        <p>Made in Creamy Souce, Chiken Tikka, Onion and Chease.</p>
+                                                        <h5>From Rs.600</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(2,600)" id="4166"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        700</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        600</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="mdAdd(2, 750)" id="4167"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        800</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        750</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="lgAdd(2, 950)" id="4168"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        1100</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        950</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(2, 600, 750, 950)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(2, 600, 750, 950)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(2)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#DetriotPop" onclick="mexican(3)">
+                        <div class="items-img">
+                            <img src="./images/Detroit20lar.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Detroit Pepperoni</h3>
+                            <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and Chease.</p>
+                            <h5>From Rs.550</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="DetriotPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/Detroit20lar.jpeg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Detroit Pepperoni</h1>
+                                                        <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and
+                                                            Chease.</p>
+                                                        <h5>From Rs.550</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(3,550)" id="4169"
+                                                                            value="Small Pizza" class="radioInp" clas>
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        600</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        550</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="mdAdd(3,600)" id="4170"
+                                                                            value="Small Pizza" class="radioInp" clas>
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        700</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        600</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="lgAdd(3,850)" id="4171"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        1050</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        850</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(3, 550, 600, 800)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(3, 550, 600, 800)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(3)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#MiamiPop" onclick="mexican(4)">
+                        <div class="items-img">
+                            <img src="./images/Miami.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Miami Beast</h3>
+                            <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and Chease.</p>
+                            <h5>From Rs.600</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="MiamiPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/Miami.jpg" class="img-fluid h-100 getImg"
+                                                alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Miami Beast</h1>
+                                                        <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and
+                                                            Chease.</p>
+                                                        <h5>From Rs.600</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(4,600)" id="4172"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        700</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        600</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="mdAdd(4, 750)" id="4173"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        900</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        750</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="lgAdd(4, 900)" id="4174"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        1050</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        900</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(4, 600, 750, 900)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(4, 600, 750, 900)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(4)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#FloridaPop" onclick="mexican(5)">
+                        <div class="items-img">
+                            <img src="./images/FloridaFeast.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Florida Feast</h3>
+                            <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and Chease.</p>
+                            <h5>From Rs.500</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="FloridaPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/FloridaFeast.jpeg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Florida Feast</h1>
+                                                        <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and
+                                                            Chease.</p>
+                                                        <h5>From Rs.500</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(5, 500)" id="4175"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        600</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        500</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="mdAdd(5,600)" id="4176"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        700</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        600</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="lgAdd(5, 800)" id="4177"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        900</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        800</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(5, 500, 600, 800)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(5, 500, 600, 800)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(5)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#OhioPop" onclick="mexican(6)">
+                        <div class="items-img">
+                            <img src="./images/Ohio.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Ohio Thrill</h3>
+                            <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and Chease.</p>
+                            <h5>From Rs.700</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="OhioPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/Ohio.jpg" class="img-fluid h-100 getImg"
+                                                alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Ohio Thril</h1>
+                                                        <p>Made in Chipotle Souce, Chiken Fijita,OnionBlack Olives and
+                                                            Chease.</p>
+                                                        <h5>From Rs.700</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class=" px-0 list-group-item">
+                                                            <div class="m-0 row py-3  border-bottom">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(6, 700)" id="4178"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Small Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        800</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        700</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="mdAdd(6, 850)" id="4179"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Medium Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3  text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        950</span>
+                                                                    <span class="text-right p-0 float-right mdPrize">
+                                                                        850</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="lgAdd(6, 1000)" id="4190"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Large Pizza</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        1100</span>
+                                                                    <span class="text-right p-0 float-right lgPrize">
+                                                                        1000</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger"
+                                                            onclick="Plus(6, 700, 850, 1000)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger"
+                                                            onclick="minus(6, 700, 850, 1000)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(6)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart
+                                                            <span>Rs:<spans class="cartValue">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <div class="container burgerItems my-5">
+            <div class="itemName">
+                <h1>Burgers</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#znbPop" onclick=" mexican(7)">
+                        <div class="items-img">
+                            <img src="./images/zBurgers.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Zinger Burger</h3>
+                            <p>Made in Chiken Zinger, Mayo Souce, and tomato Ketchup</p>
+                            <h5>From Rs.350</h5>
+                            <button class="btn btn-warning">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="znbPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/B-burgers.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <h1 class="objName">Zinger Burger</h1>
+                                                <p>Made in Chiken Zinger, Mayo Souce, and tomato Ketchup</p>
+                                                <h5>From Rs. 350</h5>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size" id="b1"
+                                                                            value="Small Pizza" class="radioInp"
+                                                                            onclick="smAdd(7, 350)">
+                                                                        <span class="span">Zinger</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        370</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        350</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(7, 350, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(7, 350, 0, 0)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(7)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart<span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes1">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#bcbPop" onclick="mexican(8)">
+                        <div class="items-img">
+                            <img src="./images/BC-burger.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Beef Chease Burger</h3>
+                            <p>Made in Beef with Souce, Onion,and Chease.</p>
+                            <h5>From Rs.420</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="bcbPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/BC-burger.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Beef Chease Burger</h1>
+                                                        <p>Made in Beef with Souce, Onion,and Chease.</p>
+                                                        <h5>From Rs.420</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(8, 420)" id="4165"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Beef Chease Burger</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        450</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        420</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(8, 420, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(8, 420, 0, 0)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(8)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes2">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#ccbPop" onclick="mexican(9)">
+                        <div class="items-img">
+                            <img src="./images/CC-burd=ger.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Chicken Chease Burger</h3>
+                            <p>Made in Chicken Souce, Chiken Tikka, Onion and Chease.</p>
+                            <h5>From Rs.400</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ccbPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/CC-burd=ger.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Chicken Chease Burger</h1>
+                                                        <p>Made in Chicken Souce, Chiken Tikka, Onion and Chease.</p>
+                                                        <h5>From Rs.400</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(9, 400)" id="4168"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Chk chs Zinger</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        450</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        400</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(9, 400, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(9, 400, 0, 0)"> <i
+                                                                class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(9)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes3">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#bfbPop" onclick="mexican(10)">
+                        <div class="items-img">
+                            <img src="./images/B-burgers.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Beef Burger</h3>
+                            <p>Made in Beef with souces and tomato Ketchup</p>
+                            <h5>From Rs.550</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="bfbPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/B-burgers.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Beef Burger</h1>
+                                                        <p>Made in Beef with souces and tomato Ketchup</p>
+                                                        <h5>From Rs 380</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(10,  380)" id="4171"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Beef Burger</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        430</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        380</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(10,  380, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(10,  380, 0, 0)">
+                                                            <i class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(10)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes4">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#fjbPop" onclick="mexican(11)">
+                        <div class="items-img">
+                            <img src="./images/images.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>New Fajita Burger</h3>
+                            <p>Made in grilled meat, usually Beef, along with grilled onions, vegetable and peppers.</p>
+                            <h5>From Rs.450</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="fjbPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/images.jpg" class="img-fluid h-100 getImg"
+                                                alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Fajita Burger</h1>
+                                                        <p>Made in grilled meat, usually Beef, along with grilled
+                                                            onions, vegetable and peppers.</p>
+                                                        <h5>From Rs.450</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(11,  450)" id="4174"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Fajita Burger</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        480</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        450</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(11,  450, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(11,  450, 0, 0)">
+                                                            <i class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(11)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes5">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#bnkPop" onclick="mexican(12)">
+                        <div class="items-img">
+                            <img src="./images/BunKabab-6.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Bun kabab</h3>
+                            <p>Made in kabab of Daal, with Yogurt Raita and vegetable Salad.</p>
+                            <h5>From Rs.250</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="bnkPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/BunKabab-6.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Bun kabab</h1>
+                                                        <p>Made in kabab of Daal, with Yogurt Raita and vegetable
+                                                            Salad..</p>
+                                                        <h5>From Rs.250</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(12,  250)" id="4177"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Bun Kabab</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        300</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        250</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(12,  250, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(12,  250, 0, 0)">
+                                                            <i class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(12)"
+                                                            type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes6">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <div class="col-md-3">
+                    <div class="items-box" data-bs-toggle="modal" data-bs-target="#mtbPop" onclick="mexican(13)">
+                        <div class="items-img">
+                            <img src="./images/muttonTIkka.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="items-text px-2 py-3">
+                            <h3>Mutton Tikka Burger</h3>
+                            <p>Made in Mutton Tikka with onion, tomato and ketchup.</p>
+                            <h5>From Rs.700</h5>
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="mtbPop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-block">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./images/muttonTIkka.jpg"
+                                                class="img-fluid h-100 getImg" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="Cart-Items py-3">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <h1 class="objName">Mutton Tikka Burger</h1>
+                                                        <p>Made in Mutton Tikka with onion, tomato and ketchup.</p>
+                                                        <h5>From Rs.700</h5>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="select">
+                                                    <ul class="px-0">
+                                                        <li class="px-0 list-group-item">
+                                                            <div class="m-0 py-3 row">
+                                                                <div class="p-0 col">
+                                                                    <label for="4160" class="d-flex lh-1 form-label">
+                                                                        <input type="radio" name="size"
+                                                                            onclick="smAdd(13,  700)" id="4197"
+                                                                            value="Small Pizza" class="radioInp">
+                                                                        <span class="span">Mtn Tik Burger</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="p-0 pe-3 text-end item-size-price col">
+                                                                    <span class="text-right p-0 float-right me-1"
+                                                                        style="text-decoration-line: line-through;">Rs.
+                                                                        800</span>
+                                                                    <span class="text-right p-0 float-right smPrize">
+                                                                        700</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row addCart">
+                                                    <div
+                                                        class="col-md-3 d-flex align-items-baseline justify-content-evenly add-sub">
+                                                        <button class="btn btn-danger" onclick="Plus(13,  700, 0, 0)"><i
+                                                                class="fa-solid fa-plus"></i></button>
+                                                        <p class="fw-bold plus-minus">1</p>
+                                                        <button class="btn btn-danger" onclick="minus(13,  700, 0, 0)">
+                                                            <i class="fa-solid fa-minus"></i></button>
+                                                    </div>
+                                                    <div class="col-md-9 cart-btn">
+                                                        <button class="btn btn-danger w-100" onclick="modal(13)"
+                                                            type="button" data-dismiss="modal"
+                                                            data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                            aria-controls="offcanvasExample">Add Cart <span>Rs:<span
+                                                                    class="cartValue"
+                                                                    id="prizes6">0</span></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <div class="side_navigation">
+            <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Link with href
+            </a> -->
+            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasExample">
+                Button with data-bs-target
+            </button> -->
+
+            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button> -->
+
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Cart</h2>
+                    <div class="d-flex align-items-baseline">
+                        <button class="btn btn-dark" onclick=" clearItems()">Clear Cart</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="d-flex mb-5">
+                        <div class="d-flex w-75">
+                            <div class="w-25">
+                                <img src="./images/arizano.jpg" class="img-fluid h-3" id="imgReplace" alt="">
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="m-0" id="itemsName">wdw</h5>
+                                <p class="m-0" id="itemsSize">wdw</p>
+                            </div>
+                        </div>
+                        <div class="itemsDesc">
+                            <div class="d-flex justify-content-between">
+                                <p class="m-0 itm">Rs <span>( <p class="m-0" id="itemsPrize"></p>)</span></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="m-0 itm">Qtn<span>
+                                        <p class="m-0" id="quantity"></p>
+                                    </span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ammountTotals my-5">
+                        <div class="total d-flex  justify-content-between align-items-baseline">
+                            <h6>Total</h3>
+                                <p id="totalPrize"></p>
+                        </div>
+                        <div
+                            class="discount d-flex border-2 border-bottom align-items-baseline justify-content-between">
+                            <h5 class="text-warning">Discount</h2>
+                                <p>0.00</p>
+                        </div>
+                        <div class="grandTotal align-items-baseline d-flex justify-content-between">
+                            <h6>Grand Total</h3>
+                                <p id="grandTotalPrize"></p>
+                        </div>
+                    </div>
+                    <div class="delievery">
+                        <p>Hurray!! You get FREE Delivery</p>
+                    </div>
+                    <div class="checkout mb-5">
+                        <a class="w-100 rounded p-3 btn btn-dark" href="./checkOut.html" >Checkout <span class="float-end"><img
+                                    src="./images/arrow-right (3).png" alt=""></span></a>
+                    </div>
+                    <div class="orderWait">
+                        <p>Your Order will be delievered approximately in 40 minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container p-3 mb-5">
+            <div class="aboutSAS">
+                <h1>SAS Fast Food : The journey to give Fast Food across all over the Pakistan</h1>
+                <p>Treat your senses with the culinary delights of SAS-FastFood, proudly serving the most
+                    mouthwatering pizzas across Karachi, Lahore, Islamabad, Multan, Hyderabad, and Rawalpindi. We are
+                    your ultimate destination for an unforgettable pizza experience, offering a diverse menu that caters
+                    to every palate. From the sumptuous flavors of our Lasagna to the delightfully cheesy goodness of
+                    our Large Pizza in Karachi, we have perfected the art of crafting pizzas that leave a lasting
+                    impression.</p>
+            </div>
+        </div>
+        <div class="footer bg-black">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center p-5">
+                        <div class="col-md-4">
+                            <div class="footer-img">
+                                <img src="./images/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-about text-white">
+                                <h3>About</h3>
+                                <ul class="p-0">
+                                    <li class="list-group-item">Karachi</li>
+                                    <li class="list-group-item">Hyderabad</li>
+                                    <li class="list-group-item">Sukkar</li>
+                                    <li class="list-group-item">Larkana</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="f-icons text-white">
+                                <h3>Social Networks</h3>
+                                <p>You can follow us on our socail media platefarms</p>
+                                <div class="iconsRow d-flex text-white">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                    <i class="fa-brands fa-square-twitter"></i>
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./javascript.js"></script>
+<script src="./jquery.js"></script>
+<script src="./bootstrapJS.min.js"></script>
+<script src="./popper.min.js"></script>
+<!-- <script src="./bootstrap.bundle.js"></script>
+<script src="./bootstrap.bundle.js.map"></script> -->
+
+</html>
